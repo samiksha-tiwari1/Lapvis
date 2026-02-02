@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page title shown in browser tab -->
+    <title>LapVis — F1 Telemetry</title>
+
+    <!-- External stylesheet for all HUD / broadcast styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =========================================================
+     Three.js canvas will be automatically injected by script.js
+     This is the animated telemetry grid / cinematic background
+========================================================== -->
+
+<!-- =========================================================
+     HUD OVERLAY (sits above the WebGL canvas)
+     Contains all broadcast-style telemetry UI elements
+========================================================== -->
+<div id="hud">
+
+    <!-- ================= LEFT TELEMETRY PANEL =================
+         Displays live changing telemetry values (fake for now)
+         Later can be connected to real telemetry if needed
+    ========================================================== -->
+    <div class="stats left">
+        <div class="label">SPEED</div>
+        <div class="value">324 <span>KM/H</span></div>
+
+        <div class="label">THROTTLE</div>
+        <div class="value">98 <span>%</span></div>
+    </div>
+
+
+    <!-- ================= RIGHT TELEMETRY PANEL =================
+         More live telemetry values
+    ========================================================== -->
+    <div class="stats right">
+        <div class="label">BRAKE</div>
+        <div class="value">0 <span>%</span></div>
+
+        <div class="label">GEAR</div>
+        <div class="value">8</div>
+    </div>
+
+
+    <!-- ================= CENTER TITLE SECTION =================
+         Main branding and entry point to the dashboard
+    ========================================================== -->
+    <div class="center">
+        <h1>LAPVIS</h1>
+        <p>F1 TELEMETRY INTELLIGENCE DASHBOARD</p>
+
+        <!-- Button that opens the Streamlit dashboard -->
+       <button id="enterBtn">Enter Dashboard</button>
+
+        <!-- ================= TYRE COMPOUND BARS =================
+             Visual reference inspired by F1 tyre graphics
+        ======================================================= -->
+        <div class="tyres">
+            <div class="tyre hard"></div>
+            <div class="tyre medium"></div>
+            <div class="tyre soft"></div>
+            <div class="tyre inter"></div>
+            <div class="tyre wet"></div>
+        </div>
+    </div>
+
+
+    <!-- ================= BROADCAST CORNER BRACKETS =================
+         Decorative elements to give F1 TV graphic vibe
+    =============================================================== -->
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+</div>
+
+
+<!-- =========================================================
+     Three.js library (for background cinematic scene)
+========================================================== -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+
+<!-- Your custom WebGL + UI logic -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+}
+
+canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+}
+
+#hud {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    pointer-events: auto;   /* allow clicks */
+}
+
+/* Side telemetry blocks */
+.stats {
+    position: absolute;
+    top: 32%;
+    width: 220px;
+}
+
+.left { left: 80px; }
+.right { right: 80px; text-align: right; }
+
+.label {
+    font-size: 12px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+.value {
+    font-size: 40px;
+    color: #00ffff;
+    margin-bottom: 30px;
+}
+
+.value span {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* Center title */
+.center {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 90px;
+    letter-spacing: 14px;
+    text-shadow: 0 0 25px #00ffff;
+}
+
+p {
+    letter-spacing: 6px;
+    opacity: 0.7;
+    margin-top: -15px;
+}
+
+button {
+    margin-top: 30px;
+    padding: 12px 40px;
+    background: transparent;
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+/* Tyre compound bars */
+.tyres {
+    margin-top: 50px;
+}
+
+.tyre {
+    display: inline-block;
+    width: 90px;
+    height: 6px;
+    margin: 0 12px;
+    border-radius: 3px;
+}
+
+.hard { background: white; }
+.medium { background: yellow; }
+.soft { background: red; }
+.inter { background: green; }
+.wet { background: blue; }
+
+/* Tyre glow pulse */
+.tyre {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%,100% { box-shadow: 0 0 8px currentColor; }
+    50% { box-shadow: 0 0 25px currentColor; }
+}
+
+/* Button scan sweep */
+button {
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,255,0.4),
+        transparent
+    );
+    animation: sweep 3s linear infinite;
+}
+
+@keyframes sweep {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Smooth fade-in of HUD */
+#hud {
+    animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cinematic vignette */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        circle at center,
+        transparent 40%,
+        rgba(0,0,0,0.6) 85%
+    );
+    z-index: 5;
+}
+
+/* Vertical light beam behind title */
+.center::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -200px;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 900px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(0,255,255,0.25),
+        transparent 70%
+    );
+    filter: blur(40px);
+    z-index: -1;
+}
+
+/* Broadcast corner brackets */
+.corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(0,255,255,0.6);
+    z-index: 10;
+}
+
+.tl {
+    top: 30px;
+    left: 30px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.tr {
+    top: 30px;
+    right: 30px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.bl {
+    bottom: 30px;
+    left: 30px;
+    border-right: none;
+    border-top: none;
+}
+
+.br {
+    bottom: 30px;
+    right: 30px;
+    border-left: none;
+    border-top: none;
+}

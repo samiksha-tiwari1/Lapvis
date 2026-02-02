@@ -1,0 +1,11 @@
+Model Information:
+* title:	Aston Martin formula 1 car
+* source:	https://sketchfab.com/3d-models/aston-martin-formula-1-car-8db1dd4a65e8416c828a99b05be16c45
+* author:	annabellecomstock (https://sketchfab.com/annabellecomstock)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Aston Martin formula 1 car" (https://sketchfab.com/3d-models/aston-martin-formula-1-car-8db1dd4a65e8416c828a99b05be16c45) by annabellecomstock (https://sketchfab.com/annabellecomstock) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
