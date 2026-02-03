@@ -34,7 +34,7 @@ Works for any race from 2021–2025 and provides:
 
  ## Insight Layer (Beyond Graphs)
 
- ![Insights](assets/insight.png)
+ ![Insights](assets/Insight.png)
 
 LapVis explains:
 	•	Where time was gained/lost
