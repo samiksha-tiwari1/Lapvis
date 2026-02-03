@@ -46,7 +46,7 @@ LapVis explains:
 
  ## Spatial Telemetry Summary
 
- ![Insights](assets/insight.png)
+ ![Summary](assets/Summary.png)
 
 Telemetry projected onto the actual circuit layout using GPS coordinates from FastF1.
 
